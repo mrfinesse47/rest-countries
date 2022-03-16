@@ -16,8 +16,21 @@ const Country = () => {
       });
   }, []);
   return (
-    <div className="Country">
+    <div className={`Country ${"Country-light"}`}>
+      <img src={country.flag} alt={country.name} />
       <h1>{country.name}</h1>
+      <p>
+        <strong>Population:</strong>
+        {country.population}
+      </p>
+      <p>
+        <strong>Region:</strong>
+        {country.region}
+      </p>
+      <p>
+        <strong>Capital:</strong>
+        {country.capital}
+      </p>
       {/* <img src="" alt="" /> */}
     </div>
   );
