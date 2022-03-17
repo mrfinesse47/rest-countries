@@ -42,8 +42,8 @@ body {
     border-radius: 5px 5px 0 0;
     img {
       display: block; /*remove inline-block spaces*/
-      height: 100%; /*make image streatch*/
-      min-width: 100%;
+      object-fit: cover;
+      width: 100%;
     }
   }
 

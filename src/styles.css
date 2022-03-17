@@ -51,9 +51,9 @@ body {
 .Country figure img {
   display: block;
   /*remove inline-block spaces*/
-  height: 100%;
-  /*make image streatch*/
-  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .Country .container {
