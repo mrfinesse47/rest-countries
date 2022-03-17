@@ -5,7 +5,7 @@ const Country = () => {
   const [country, setCountry] = useState("");
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://restcountries.com/v2/name/algeria")
+    fetch("https://restcountries.com/v2/name/brazil")
       //brings back an array of results,
       .then((response) => response.json())
       .then((countries) => {
@@ -18,10 +18,6 @@ const Country = () => {
       });
   }, []);
 
-  const determineDimenstions = () => {
-    alert("hi");
-  };
-
   return (
     <>
       {isLoading ? (
@@ -29,11 +25,7 @@ const Country = () => {
       ) : (
         <div className={`Country ${"Country-light"}`}>
           <figure>
-            <img
-              src={country.flag}
-              alt={country.name}
-              onLoad={determineDimenstions}
-            />
+            <img src={country.flag} alt={country.name} />
           </figure>
 
           <div className="container">
