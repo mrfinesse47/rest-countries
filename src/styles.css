@@ -53,6 +53,7 @@ body {
   /*remove inline-block spaces*/
   height: 100%;
   /*make image streatch*/
+  min-width: 100%;
 }
 
 .Country .container {

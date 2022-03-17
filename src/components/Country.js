@@ -5,7 +5,7 @@ const Country = () => {
   const [country, setCountry] = useState("");
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://restcountries.com/v2/name/usa")
+    fetch("https://restcountries.com/v2/name/ukraine")
       //brings back an array of results,
       .then((response) => response.json())
       .then((countries) => {

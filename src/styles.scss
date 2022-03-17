@@ -43,6 +43,7 @@ body {
     img {
       display: block; /*remove inline-block spaces*/
       height: 100%; /*make image streatch*/
+      min-width: 100%;
     }
   }
 
