@@ -1,7 +1,7 @@
 import Country from "./Country";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const CountryList = (props) => {
   //will want to filter ccountries first before mapping
@@ -19,7 +19,12 @@ const CountryList = (props) => {
             required
           ></input>
           <div className="placeholder">
-            <FontAwesomeIcon icon={faCoffee} /> <div> Enter Text</div>
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="placeholder-icon"
+              size="lg"
+            />
+            <div className="placeholder-message"> Search For A Country....</div>
           </div>
         </label>
       </div>
