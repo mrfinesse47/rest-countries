@@ -2,12 +2,19 @@ import Country from "./Country";
 import { useEffect, useState } from "react";
 
 const CountryList = (props) => {
-  const [filter, setFilter] = useState({ region: "all", countries: "all" });
   //will want to filter ccountries first before mapping
+  const [search, setSearch] = useState("");
+  // const [region, setRegion]= useState("");//will worry about later
   return (
     <>
-      <div></div>
-      <div>
+      <div className="filters">
+        <input
+          type="text"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        ></input>
+      </div>
+      <div className="country-list">
         {props.countries.map((country, index) => {
           return (
             <Country
