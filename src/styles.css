@@ -105,7 +105,7 @@ body {
 .filters .country-search input {
   border: none;
   margin: 10px;
-  font-size: 16px;
+  font-size: 20px;
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
@@ -113,7 +113,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 12px;
+  padding: 12px 20px;
   border-radius: 3px;
   width: 343px;
   height: 48px;
@@ -134,13 +134,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #aaa;
+  color: #c4c4c4;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
 .filters .country-search .placeholder .placeholder-message {
   margin-left: 26px;
+}
+
+.filters .country-search .placeholder .placeholder-icon {
+  color: #b2b2b2;
 }
 
 .filters .country-search input:focus + .placeholder,

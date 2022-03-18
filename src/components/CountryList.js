@@ -28,7 +28,7 @@ const CountryList = (props) => {
           </div>
         </label>
       </div>
-      <div className="country-list">
+      <main className="country-list">
         {props.countries.map((country, index) => (
           <Country
             key={country.cca2}
@@ -39,7 +39,7 @@ const CountryList = (props) => {
             capital={country.capital}
           />
         ))}
-      </div>
+      </main>
     </>
   );
 };
