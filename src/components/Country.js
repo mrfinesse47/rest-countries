@@ -19,36 +19,29 @@ const Country = () => {
   }, []);
 
   return (
-    <>
-      {isLoading ? (
-        <div>loading</div>
-      ) : (
-        <div className={`Country ${"Country-light"}`}>
-          <figure>
-            <img src={country.flag} alt={country.name} />
-          </figure>
+    <div className={`Country ${"Country-light"}`}>
+      <figure>
+        <img src={country.flag} alt={country.name} />
+      </figure>
 
-          <div className="container">
-            <h2>{country.name}</h2>
-            <div className="details">
-              <p>
-                <strong>Population: </strong>
-                {country.population}
-              </p>
-              <p>
-                <strong>Region: </strong>
-                {country.region}
-              </p>
-              <p>
-                <strong>Capital: </strong>
-                {country.capital}
-              </p>
-            </div>
-          </div>
-          {/* <img src="" alt="" /> */}
+      <div className="container">
+        <h2>{country.name}</h2>
+        <div className="details">
+          <p>
+            <strong>Population: </strong>
+            {country.population && country.population.toLocaleString("en-US")}
+          </p>
+          <p>
+            <strong>Region: </strong>
+            {country.region}
+          </p>
+          <p>
+            <strong>Capital: </strong>
+            {country.capital}
+          </p>
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 };
 
