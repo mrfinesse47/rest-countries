@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import "../styles.css";
 
-const Country = (props) => {
+const Country = ({ flag, name, population, capital, region }) => {
   // const [country, setCountry] = useState("");
   // const [isLoading, setLoading] = useState(true);
   // useEffect(() => {
@@ -21,23 +21,23 @@ const Country = (props) => {
   return (
     <div className={`Country ${"Country-light"}`}>
       <figure>
-        <img src={props.flag} alt={props.name} />
+        <img src={flag} alt={name} />
       </figure>
 
       <div className="container">
-        <h2>{props.name}</h2>
+        <h2>{name}</h2>
         <div className="details">
           <p>
             <strong>Population: </strong>
-            {props.population && props.population.toLocaleString("en-US")}
+            {population && population.toLocaleString("en-US")}
           </p>
           <p>
             <strong>Region: </strong>
-            {props.region}
+            {region}
           </p>
           <p>
             <strong>Capital: </strong>
-            {props.capital}
+            {capital}
           </p>
         </div>
       </div>

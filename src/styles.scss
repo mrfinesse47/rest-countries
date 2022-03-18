@@ -117,5 +117,8 @@ body {
       // border-color: #222;
       opacity: 0;
     }
+    .placeholder:hover {
+      cursor: text;
+    }
   }
 }
