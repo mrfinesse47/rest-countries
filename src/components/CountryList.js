@@ -1,7 +1,6 @@
 import Country from "./Country";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Search from "./Search";
 
 const CountryList = (props) => {
   //will want to filter ccountries first before mapping
@@ -10,22 +9,7 @@ const CountryList = (props) => {
   return (
     <>
       <div className="filters">
-        <label className="country-search">
-          <input
-            type="text"
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            required
-          ></input>
-          <div className="placeholder">
-            <FontAwesomeIcon
-              icon={faSearch}
-              className="placeholder-icon"
-              size="lg"
-            />
-            <div className="placeholder-message"> Search For A Country....</div>
-          </div>
-        </label>
+        <Search setSearch={setSearch} search={search} />
       </div>
       <main className="country-list">
         {props.countries.map((country, index) => (
