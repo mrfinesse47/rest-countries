@@ -5,7 +5,7 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 const DropDown = () => {
   const [region, setRegion] = useState("");
   const [isActive, setActive] = useState(false);
-  const [selected, setSeleccted] = useState(1);
+  const [selected, setSeleccted] = useState(2);
 
   useEffect(() => {
     window.addEventListener("click", () => {
@@ -24,6 +24,11 @@ const DropDown = () => {
       setActive(true);
     }
   };
+
+  const selectItem = (itemNum) => {
+    setSeleccted(itemNum);
+  };
+
   return (
     <div className="region-search">
       <ul className="menu-ctn" onClick={(event) => openMenu(event)}>
@@ -35,9 +40,24 @@ const DropDown = () => {
             <FontAwesomeIcon icon={faAngleDown} />
           </div>
           <ul id="drop-down" className={`${isActive ? "active" : "in-active"}`}>
-            <li className={selected === 1 && "selected"}>Option 1</li>
-            <li className={selected === 2 && "selected"}>Option 2</li>
-            <li className={selected === 3 && "selected"}>Option 3</li>
+            <li
+              className={selected === 1 && "selected"}
+              onClick={() => selectItem(1)}
+            >
+              Option 1
+            </li>
+            <li
+              className={selected === 2 && "selected"}
+              onClick={() => selectItem(2)}
+            >
+              Option 2
+            </li>
+            <li
+              className={selected === 3 && "selected"}
+              onClick={() => selectItem(3)}
+            >
+              Option 3
+            </li>
           </ul>
         </li>
       </ul>
