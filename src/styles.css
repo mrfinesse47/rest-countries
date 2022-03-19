@@ -155,4 +155,49 @@ body {
 .filters .country-search .placeholder:hover {
   cursor: text;
 }
+
+.filters .region-search {
+  font-size: 14px;
+}
+
+.filters .region-search ul {
+  list-style: none;
+}
+
+.filters .region-search .menu-ctn > li {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 15px;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+.filters .region-search .menu-ctn li:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.filters .region-search #drop-down {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: salmon;
+  z-index: 1;
+  text-align: center;
+}
+
+.filters .region-search #drop-down li {
+  padding: 10px 15px;
+}
+
+.filters .region-search #drop-down.active {
+  display: block;
+}
+
+.filters .region-search #drop-down.in-active {
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */

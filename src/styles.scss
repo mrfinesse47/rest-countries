@@ -135,4 +135,42 @@ body {
       cursor: text;
     }
   }
+  .region-search {
+    font-size: 14px;
+    ul {
+      list-style: none;
+    }
+    .menu-ctn > li {
+      display: inline-block;
+      background-color: white;
+      padding: 10px 15px;
+      transition: all 0.8s ease;
+      position: relative;
+    }
+
+    .menu-ctn li:hover {
+      cursor: pointer;
+      background-color: lightblue;
+    }
+    #drop-down {
+      display: none;
+      position: absolute;
+
+      width: 100%;
+      top: 100%;
+      left: 0;
+      background-color: salmon;
+      z-index: 1;
+      text-align: center;
+      li {
+        padding: 10px 15px;
+      }
+    }
+    #drop-down.active {
+      display: block;
+    }
+    #drop-down.in-active {
+      display: none;
+    }
+  }
 }

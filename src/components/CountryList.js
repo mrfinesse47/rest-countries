@@ -7,7 +7,6 @@ const CountryList = (props) => {
   //will want to filter ccountries first before mapping
   const [search, setSearch] = useState("");
 
-  // const [region, setRegion]= useState("");//will worry about later
   return (
     <>
       <div className="filters">
