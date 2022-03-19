@@ -26,6 +26,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Country {
@@ -90,9 +93,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 343px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .filters .country-search {
@@ -105,6 +116,7 @@ body {
 .filters .country-search input {
   border: none;
   margin: 10px;
+  margin-left: 0px;
   font-size: 20px;
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
@@ -158,10 +170,7 @@ body {
 
 .filters .region-search {
   font-size: 12px;
-}
-
-.filters .region-search .message {
-  width: 1000px;
+  width: 200px;
 }
 
 .filters .region-search ul {
@@ -180,11 +189,11 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: white;
-  padding: 17px 19px 17px 24px;
+  padding: 16px 19px 16px 24px;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
-  width: 200px;
+  width: 100%;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   position: relative;
