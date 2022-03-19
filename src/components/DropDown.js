@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const DropDown = () => {
+  const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
   const [region, setRegion] = useState("");
   const [isActive, setActive] = useState(false);
   const [selected, setSeleccted] = useState(2);
@@ -40,24 +41,15 @@ const DropDown = () => {
             <FontAwesomeIcon icon={faAngleDown} />
           </div>
           <ul id="drop-down" className={`${isActive ? "active" : "in-active"}`}>
-            <li
-              className={selected === 1 && "selected"}
-              onClick={() => selectItem(1)}
-            >
-              Option 1
-            </li>
-            <li
-              className={selected === 2 && "selected"}
-              onClick={() => selectItem(2)}
-            >
-              Option 2
-            </li>
-            <li
-              className={selected === 3 && "selected"}
-              onClick={() => selectItem(3)}
-            >
-              Option 3
-            </li>
+            {regions.map((region, index) => (
+              <li
+                key={index}
+                className={selected === index ? "selected" : ""}
+                onClick={() => selectItem(index)}
+              >
+                {region}
+              </li>
+            ))}
           </ul>
         </li>
       </ul>
