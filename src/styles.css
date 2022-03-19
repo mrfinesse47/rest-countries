@@ -185,9 +185,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -198,6 +198,7 @@ body {
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   width: 100%;
+  text-align: left;
   position: relative;
 }
 
@@ -209,18 +210,30 @@ body {
   display: none;
   position: absolute;
   width: 100%;
-  top: 100%;
+  top: 108%;
   left: 0;
   background-color: white;
   z-index: 1;
-  text-align: center;
+  text-align: left;
+  border-radius: 5px;
 }
 
 .filters .region-search #drop-down li {
   padding: 10px 15px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   background-color: white;
+  -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+          box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+  padding-left: 24px;
+}
+
+.filters .region-search #drop-down li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.filters .region-search #drop-down li:last-child {
+  border-radius: 0 0 5px 5px;
 }
 
 .filters .region-search #drop-down li:hover {
