@@ -157,7 +157,11 @@ body {
 }
 
 .filters .region-search {
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.filters .region-search .message {
+  width: 1000px;
 }
 
 .filters .region-search ul {
@@ -165,9 +169,22 @@ body {
 }
 
 .filters .region-search .menu-ctn > li {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: white;
-  padding: 10px 15px;
+  padding: 17px 19px 17px 24px;
+  -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+          box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+  border-radius: 5px;
+  width: 200px;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   position: relative;
@@ -175,7 +192,6 @@ body {
 
 .filters .region-search .menu-ctn li:hover {
   cursor: pointer;
-  background-color: lightblue;
 }
 
 .filters .region-search #drop-down {
@@ -191,6 +207,10 @@ body {
 
 .filters .region-search #drop-down li {
   padding: 10px 15px;
+}
+
+.filters .region-search #drop-down li:hover {
+  background-color: #b2b2b2;
 }
 
 .filters .region-search #drop-down .selected {

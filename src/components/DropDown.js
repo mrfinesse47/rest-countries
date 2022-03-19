@@ -1,4 +1,6 @@
 import { React, useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const DropDown = () => {
   const [region, setRegion] = useState("");
@@ -10,7 +12,7 @@ const DropDown = () => {
       setActive(false);
     });
     return window.removeEventListener("click", () => {
-      setActive(false);
+      setActive(false); //remove event listener when component unmounts
     });
   }, []);
 
@@ -24,13 +26,15 @@ const DropDown = () => {
   };
   return (
     <div className="region-search">
-      <ul className={`menu-ctn`} onClick={openMenu}>
+      <ul className="menu-ctn" onClick={openMenu}>
         <li id="menu">
-          Filter By Region
-          <ul
-            id={`drop-down`}
-            className={`${isActive ? "active" : "in-active"}`}
-          >
+          <div className="message">
+            <p>Filter By Region</p>
+          </div>
+          <div className="icon">
+            <FontAwesomeIcon icon={faAngleDown} />
+          </div>
+          <ul id="drop-down" className={`${isActive ? "active" : "in-active"}`}>
             <li className={selected === 1 && "selected"}>Option 1</li>
             <li className={selected === 2 && "selected"}>Option 2</li>
             <li className={selected === 3 && "selected"}>Option 3</li>
