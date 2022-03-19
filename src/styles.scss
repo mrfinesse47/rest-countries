@@ -165,6 +165,9 @@ body {
       li {
         padding: 10px 15px;
       }
+      .selected {
+        background-color: #b2b2b2;
+      }
     }
     #drop-down.active {
       display: block;
