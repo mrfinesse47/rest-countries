@@ -1,17 +1,21 @@
 import Country from "./Country";
 import { useState } from "react";
-import Search from "./Search";
-import DropDown from "./DropDown";
+import Search from "./filters/Search";
+import DropDown from "./filters/DropDown";
 
 const CountryList = (props) => {
+  //this will be a view in router
   //will want to filter countries first before mapping
   const [search, setSearch] = useState("");
+  const [region, setRegion] = useState("");
+
+  console.log("renders");
 
   return (
     <>
       <div className="filters">
         <Search setSearch={setSearch} search={search} />
-        <DropDown />
+        <DropDown setRegion={setRegion} />
       </div>
       <main className="country-list">
         {props.countries.map((country, index) => (

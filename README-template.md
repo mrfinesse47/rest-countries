@@ -65,11 +65,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### CSS Object Fit Property
 
-To see how you can add code snippets, see below:
-
-about the css object fit property, I noticed the flags were cropped on the smaller cards in the figma design files. Some flags would leave white-space horizontally or some vertically due to all flags not being the same dimensions. So I had to figure out a way to crop the flag horizontally or vertically depending on how it overflowed from its parent container. from w3: If we use object-fit: cover; the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit:
+I noticed the flags were cropped on the smaller cards in the figma design files. Some flags would leave white-space horizontally or some vertically due to all flags not being the same dimensions. So I had to figure out a way to crop the flag horizontally or vertically depending on how it overflowed from its parent container. from w3: If we use object-fit: cover; the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit:
 
 ```css
 figure {

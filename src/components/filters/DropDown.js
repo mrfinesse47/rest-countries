@@ -2,11 +2,10 @@ import { React, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-const DropDown = () => {
-  const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
-  const [region, setRegion] = useState("");
+const DropDown = (props) => {
+  const regions = ["Africa", "America", "Asia", "Europe", "Oceania", "All"];
   const [isActive, setActive] = useState(false);
-  const [selected, setSeleccted] = useState(2);
+  const [selected, setSeleccted] = useState(-1);
 
   useEffect(() => {
     window.addEventListener("click", () => {
@@ -28,6 +27,7 @@ const DropDown = () => {
 
   const selectItem = (itemNum) => {
     setSeleccted(itemNum);
+    props.setRegion(regions[itemNum - 1]);
   };
 
   return (
@@ -35,7 +35,7 @@ const DropDown = () => {
       <ul className="menu-ctn" onClick={(event) => openMenu(event)}>
         <li id="menu">
           <div className="message">
-            <p>Filter By Region</p>
+            <p>{selected !== -1 ? regions[selected] : "Filter By Region"}</p>
           </div>
           <div className="icon">
             <FontAwesomeIcon icon={faAngleDown} />
