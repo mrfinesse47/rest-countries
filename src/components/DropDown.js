@@ -26,7 +26,7 @@ const DropDown = () => {
   };
   return (
     <div className="region-search">
-      <ul className="menu-ctn" onClick={openMenu}>
+      <ul className="menu-ctn" onClick={(event) => openMenu(event)}>
         <li id="menu">
           <div className="message">
             <p>Filter By Region</p>
