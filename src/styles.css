@@ -251,4 +251,34 @@ body {
 .filters .region-search #drop-down.in-active {
   display: none;
 }
+
+.heading {
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+}
+
+.heading .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 16px;
+}
+
+.heading .container h1 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.heading .container h3 {
+  font-size: 12px;
+  font-weight: 600;
+}
 /*# sourceMappingURL=styles.css.map */

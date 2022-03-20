@@ -1,6 +1,7 @@
 import "../styles.css";
 import CountryList from "./CountryList";
 import { useEffect, useState } from "react";
+import Heading from "./Heading";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -22,6 +23,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Heading />
       <CountryList countries={countries} />
     </div>
   );
