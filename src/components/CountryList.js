@@ -18,9 +18,12 @@ const CountryList = (props) => {
       <main className="country-list">
         {props.countries
           .filter((country) => {
-            console.log(country);
             //first filter for search of country name
-            const regex = new RegExp(search, "gi");
+            const strimgWithoutRegexSpecChar = search.replace(
+              /[-[\]{}()*+?.,\\^$|#\s]/g,
+              "\\$&"
+            ); //disallows regex  special characters from user
+            const regex = new RegExp(strimgWithoutRegexSpecChar, "gi");
             //we search by alt names, common name, and official name
             return (
               country.name.common.match(regex) ||
