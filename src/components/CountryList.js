@@ -18,6 +18,7 @@ const CountryList = (props) => {
       <main className="country-list">
         {props.countries
           .filter((country) => {
+            console.log(country);
             //first filter for search of country name
             const regex = new RegExp(search, "gi");
             //we search by alt names, common name, and official name
@@ -26,6 +27,13 @@ const CountryList = (props) => {
               country.name.official.match(regex) ||
               country.altSpellings.some((spelling) => spelling.match(regex))
             );
+          })
+          .filter((country) => {
+            if (region.toLowerCase() === "all") {
+              return true;
+            }
+            const regex = new RegExp(region, "gi");
+            return country.region.match(regex);
           })
           .map((country) => (
             <Country

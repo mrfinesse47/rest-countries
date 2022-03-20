@@ -27,7 +27,7 @@ const DropDown = (props) => {
 
   const selectItem = (itemNum) => {
     setSeleccted(itemNum);
-    props.setRegion(regions[itemNum - 1]);
+    props.setRegion(regions[itemNum]);
   };
 
   return (
