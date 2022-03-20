@@ -18,10 +18,16 @@ const CountryList = (props) => {
       <main className="country-list">
         {props.countries
           .filter((country) => {
+            //first filter for search of country name
             const regex = new RegExp(search, "gi");
-            return country.name.common.match(regex);
+            //we search by alt names, common name, and official name
+            return (
+              country.name.common.match(regex) ||
+              country.name.official.match(regex) ||
+              country.altSpellings.some((spelling) => spelling.match(regex))
+            );
           })
-          .map((country, index) => (
+          .map((country) => (
             <Country
               key={country.cca2}
               flag={country.flags.svg}
