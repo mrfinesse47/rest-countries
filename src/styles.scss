@@ -14,6 +14,7 @@ strong {
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  color: #111517;
 }
 
 .App {
@@ -233,9 +234,17 @@ body {
       font-size: 14px;
       font-weight: 800;
     }
-    h3 {
-      font-size: 12px;
-      font-weight: 600;
+
+    .mode {
+      display: flex;
+      h3 {
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 8px;
+      }
+    }
+    .mode:hover {
+      cursor: pointer;
     }
   }
 }

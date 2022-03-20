@@ -6,6 +6,7 @@ import Heading from "./Heading";
 function App() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     // https://restcountries.com/v3.1/all
@@ -23,8 +24,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Heading />
-      <CountryList countries={countries} />
+      <Heading setDarkMode={setDarkMode} isDarkMode={isDarkMode} />
+      <CountryList countries={countries} isDarkMode={isDarkMode} />
     </div>
   );
 }

@@ -11,6 +11,7 @@ strong {
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  color: #111517;
 }
 
 .App {
@@ -277,8 +278,19 @@ body {
   font-weight: 800;
 }
 
-.heading .container h3 {
+.heading .container .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heading .container .mode h3 {
   font-size: 12px;
   font-weight: 600;
+  margin-left: 8px;
+}
+
+.heading .container .mode:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
