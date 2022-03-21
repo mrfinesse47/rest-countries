@@ -5,7 +5,11 @@ import { faMoon as faoMoon } from "@fortawesome/free-regular-svg-icons";
 
 const Heading = (props) => {
   return (
-    <header className="heading">
+    <header
+      className={`Heading ${
+        props.isDarkMode ? "Heading-dark" : "Heading-light"
+      }`}
+    >
       <div className="container">
         <h1>Where In The World?</h1>
         <div
