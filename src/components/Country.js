@@ -1,9 +1,23 @@
 import { React } from "react";
 import "../styles.css";
 
-const Country = ({ flag, name, population, capital, region, isDarkMode }) => {
+const Country = ({
+  flag,
+  name,
+  population,
+  capital,
+  region,
+  isDarkMode,
+  id,
+  setSelectedCountry,
+}) => {
   return (
-    <div className={`Country ${isDarkMode ? "Country-dark" : "Country-light"}`}>
+    <div
+      className={`Country ${isDarkMode ? "Country-dark" : "Country-light"}`}
+      onClick={() => {
+        setSelectedCountry(id);
+      }}
+    >
       <figure>
         <img src={flag} alt={name} />
       </figure>

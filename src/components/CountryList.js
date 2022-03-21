@@ -45,12 +45,14 @@ const CountryList = (props) => {
           .map((country) => (
             <Country
               key={country.cca2}
+              id={country.cca2}
               flag={country.flags.svg}
               name={country.name.common}
               population={country.population}
               region={country.region}
               capital={country.capital}
               isDarkMode={props.isDarkMode}
+              setSelectedCountry={props.setSelectedCountry}
             />
           ))}
       </main>

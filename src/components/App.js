@@ -2,11 +2,14 @@ import "../styles.css";
 import CountryList from "./CountryList";
 import { useEffect, useState } from "react";
 import Heading from "./Heading";
+import CountryDetails from "./CountryDetails";
 import useStateWithLocalStorage from "../customHooks/useStateWithLocalStorage";
 
 function App() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  //would use React Router For a larger project
   const [isDarkMode, setDarkMode] = useStateWithLocalStorage(
     "isDarkMode",
     false
@@ -14,6 +17,11 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!isDarkMode);
+  };
+
+  const findCountryByID = (id) => {
+    // console.log("find country" + id);
+    return countries.filter((country) => country.cca2 === id);
   };
 
   useEffect(() => {
@@ -32,7 +40,18 @@ function App() {
   return (
     <div className={`App ${isDarkMode ? "App-dark" : "App-light"}`}>
       <Heading toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <CountryList countries={countries} isDarkMode={isDarkMode} />
+      {selectedCountry === null ? (
+        <CountryList
+          countries={countries}
+          isDarkMode={isDarkMode}
+          setSelectedCountry={setSelectedCountry}
+        />
+      ) : (
+        <CountryDetails
+          selectedCountry={selectedCountry}
+          country={findCountryByID(selectedCountry)}
+        />
+      )}
     </div>
   );
 }
