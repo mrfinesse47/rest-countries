@@ -95,15 +95,33 @@ figure {
 }
 ```
 
+#### Custom useState Hook For Local Storage
+
+I found this neat trick to create a custom hook for useState but which sets local strage at the same time. I modified it a little as well to incorporate an initial value if it does not exist in local storage.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
+import { useEffect, useState } from "react";
+
+const useStateWithLocalStorage = (localStorageKey, fallBack) => {
+  const [value, setValue] = useState(
+    localStorage.getItem(localStorageKey) || fallBack
+  );
+  //brings in the initial value from local storage and sets state or sets state to the fallback
+
+  useEffect(() => {
+    localStorage.setItem(localStorageKey, value);
+  }, [value]); //will run any time value changes, keeping local storage updated
+
+  //exports value and setvalue like a normal useState hook would.
+  //you don't notice the difference using it elsewhere
+  return [value, setValue];
+};
+
+export default useStateWithLocalStorage;
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+credit to this blog [robinwieruch](https://www.robinwieruch.de/local-storage-react/)
 
 ### Continued development
 
