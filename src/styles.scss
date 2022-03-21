@@ -120,7 +120,6 @@ body {
       margin-left: 0px;
       font-size: 20px;
 
-      background: $white;
       box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
       border-radius: 5px;
 
@@ -133,6 +132,7 @@ body {
       height: 48px;
       outline: none;
     }
+
     .placeholder {
       position: absolute;
       font-size: 12px;
@@ -147,19 +147,32 @@ body {
       .placeholder-message {
         margin-left: 26px;
       }
-      .placeholder-icon {
-        color: $dark-gray;
-      }
     }
+
     input:focus + .placeholder,
     input:valid + .placeholder {
-      // top: 20px;
-      // font-size: 10px;
-      // border-color: #222;
       opacity: 0;
     }
     .placeholder:hover {
       cursor: text;
+    }
+  }
+
+  .country-search-dark {
+    input {
+      background-color: $dark-blue;
+      color: $white;
+    }
+    .placeholder {
+      color: $white;
+    }
+  }
+  .country-search-light {
+    input {
+      background-color: $white;
+    }
+    .placeholder {
+      color: $dark-gray;
     }
   }
   //------------------------------

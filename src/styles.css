@@ -135,7 +135,6 @@ body {
   margin: 10px;
   margin-left: 0px;
   font-size: 20px;
-  background: white;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
@@ -172,10 +171,6 @@ body {
   margin-left: 26px;
 }
 
-.filters .country-search .placeholder .placeholder-icon {
-  color: #858585;
-}
-
 .filters .country-search input:focus + .placeholder,
 .filters .country-search input:valid + .placeholder {
   opacity: 0;
@@ -183,6 +178,23 @@ body {
 
 .filters .country-search .placeholder:hover {
   cursor: text;
+}
+
+.filters .country-search-dark input {
+  background-color: #2b3945;
+  color: white;
+}
+
+.filters .country-search-dark .placeholder {
+  color: white;
+}
+
+.filters .country-search-light input {
+  background-color: white;
+}
+
+.filters .country-search-light .placeholder {
+  color: #858585;
 }
 
 .filters .region-search {
