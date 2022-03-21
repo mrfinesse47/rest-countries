@@ -18,13 +18,21 @@ body {
 }
 
 .App {
-  background-color: $very-light-gray;
+  //  background-color: $very-light-gray;
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.App-dark {
+  background-color: $very-dark-blue-bg;
+}
+
+.App-light {
+  background-color: $very-light-gray;
 }
 
 //-------------------------------------------------------------------//

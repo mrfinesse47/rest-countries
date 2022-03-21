@@ -23,7 +23,7 @@ function App() {
       });
   }, []);
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? "App-dark" : "App-light"}`}>
       <Heading setDarkMode={setDarkMode} isDarkMode={isDarkMode} />
       <CountryList countries={countries} isDarkMode={isDarkMode} />
     </div>
