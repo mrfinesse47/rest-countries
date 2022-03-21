@@ -12,8 +12,12 @@ const CountryList = (props) => {
   return (
     <>
       <div className="filters">
-        <Search setSearch={setSearch} search={search} />
-        <DropDown setRegion={setRegion} />
+        <Search
+          setSearch={setSearch}
+          search={search}
+          isDarkMode={props.isDarkMode}
+        />
+        <DropDown setRegion={setRegion} isDarkMode={props.isDarkMode} />
       </div>
       <main className="country-list">
         {props.countries

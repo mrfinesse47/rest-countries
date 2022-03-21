@@ -12,10 +12,7 @@ const Heading = (props) => {
     >
       <div className="container">
         <h1>Where In The World?</h1>
-        <div
-          className="mode"
-          onClick={() => props.setDarkMode(!props.isDarkMode)}
-        >
+        <div className="mode" onClick={() => props.toggleDarkMode()}>
           <FontAwesomeIcon
             icon={props.isDarkMode ? faMoon : faoMoon}
             className="placeholder-icon"

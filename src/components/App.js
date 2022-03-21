@@ -2,18 +2,25 @@ import "../styles.css";
 import CountryList from "./CountryList";
 import { useEffect, useState } from "react";
 import Heading from "./Heading";
+import useStateWithLocalStorage from "../customHooks/useStateWithLocalStorage";
 
 function App() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useStateWithLocalStorage(
+    "isDarkMode",
+    false
+  );
+
+  const toggleDarkMode = () => {
+    setDarkMode(!isDarkMode);
+  };
 
   useEffect(() => {
-    // https://restcountries.com/v3.1/all
-    // or https://restcountries.com/v3.1/name/
     fetch("https://restcountries.com/v3.1/all")
       //brings back an array of results,
       .then((response) => response.json())
+      //convert the JSON response into a JS object
       .then((countries) => {
         setCountries(countries);
         setLoading(false);
@@ -24,7 +31,7 @@ function App() {
   }, []);
   return (
     <div className={`App ${isDarkMode ? "App-dark" : "App-light"}`}>
-      <Heading setDarkMode={setDarkMode} isDarkMode={isDarkMode} />
+      <Heading toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <CountryList countries={countries} isDarkMode={isDarkMode} />
     </div>
   );
