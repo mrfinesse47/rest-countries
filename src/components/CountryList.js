@@ -46,6 +46,7 @@ const CountryList = (props) => {
               population={country.population}
               region={country.region}
               capital={country.capital}
+              isDarkMode={props.isDarkMode}
             />
           ))}
       </main>

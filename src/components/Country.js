@@ -1,25 +1,9 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import "../styles.css";
 
-const Country = ({ flag, name, population, capital, region }) => {
-  // const [country, setCountry] = useState("");
-  // const [isLoading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   fetch("https://restcountries.com/v2/name/brazil")
-  //     //brings back an array of results,
-  //     .then((response) => response.json())
-  //     .then((countries) => {
-  //       console.log(countries);
-  //       setCountry(countries[0]);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
-
+const Country = ({ flag, name, population, capital, region, isDarkMode }) => {
   return (
-    <div className={`Country ${"Country-light"}`}>
+    <div className={`Country ${isDarkMode ? "Country-dark" : "Country-light"}`}>
       <figure>
         <img src={flag} alt={name} />
       </figure>

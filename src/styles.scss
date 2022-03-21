@@ -14,7 +14,7 @@ strong {
 
 body {
   font-family: "Nunito Sans", sans-serif;
-  color: #111517;
+  color: $very-dark-blue-text;
 }
 
 .App {
@@ -83,7 +83,12 @@ body {
 }
 
 .Country-light {
-  background-color: white;
+  background-color: $white;
+}
+
+.Country-dark {
+  background-color: $dark-blue;
+  color: $white;
 }
 
 //-------------------------------------------------------------------//
@@ -107,7 +112,7 @@ body {
       margin-left: 0px;
       font-size: 20px;
 
-      background: #ffffff;
+      background: $white;
       box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
       border-radius: 5px;
 
@@ -129,13 +134,13 @@ body {
       display: flex;
       font-weight: 400;
       align-items: center;
-      color: #c4c4c4;
+      color: $dark-gray;
       transition: opacity 0.3s ease;
       .placeholder-message {
         margin-left: 26px;
       }
       .placeholder-icon {
-        color: #b2b2b2;
+        color: $dark-gray;
       }
     }
     input:focus + .placeholder,
@@ -163,7 +168,7 @@ body {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      background-color: white;
+      background-color: $white;
       padding: 16px 19px 16px 24px;
       box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
       border-radius: 5px;
@@ -181,7 +186,7 @@ body {
       width: 100%;
       top: 108%;
       left: 0;
-      background-color: white;
+      background-color: $white;
       z-index: 1;
       text-align: left;
 
@@ -190,7 +195,7 @@ body {
       li {
         padding: 10px 15px;
         transition: background-color 0.3s ease;
-        background-color: white;
+        background-color: $white;
         box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
 
         padding-left: 24px;
@@ -223,7 +228,7 @@ body {
 
 .heading {
   width: 100%;
-  background-color: #ffffff;
+  background-color: $white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
   .container {
     display: flex;
