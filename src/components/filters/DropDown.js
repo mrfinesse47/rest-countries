@@ -31,7 +31,11 @@ const DropDown = (props) => {
   };
 
   return (
-    <div className="region-search">
+    <div
+      className={`region-search ${
+        props.isDarkMode ? "region-search-dark" : "region-search-light"
+      }`}
+    >
       <ul className="menu-ctn" onClick={(event) => openMenu(event)}>
         <li id="menu">
           <div className="message">

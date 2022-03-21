@@ -168,18 +168,20 @@ body {
   .region-search {
     font-size: 12px;
     width: 200px;
+    border-radius: 5px;
     ul {
       list-style: none;
     }
+
     .menu-ctn > li {
       //would normally be set in a navbar, so i can reuse i'll leave it as a ul-li
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      background-color: $white;
+      // background-color: $white;
       padding: 16px 19px 16px 24px;
       box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-      border-radius: 5px;
+      // border-radius: 5px;
       width: 100%;
       text-align: left;
       position: relative;
@@ -194,18 +196,15 @@ body {
       width: 100%;
       top: 108%;
       left: 0;
-      background-color: $white;
       z-index: 1;
       text-align: left;
+      box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
 
       border-radius: 5px;
 
       li {
         padding: 10px 15px;
         transition: background-color 0.3s ease;
-        background-color: $white;
-        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-
         padding-left: 24px;
       }
       li:first-child {
@@ -226,6 +225,19 @@ body {
     }
     #drop-down.in-active {
       display: none;
+    }
+  }
+  .region-search-dark {
+    background-color: $dark-blue;
+    color: $white;
+    #drop-down {
+      background-color: $dark-blue;
+    }
+  }
+  .region-search-light {
+    background-color: $white;
+    #drop-down {
+      background-color: $white;
     }
   }
 }

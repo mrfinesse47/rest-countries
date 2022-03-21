@@ -188,6 +188,7 @@ body {
 .filters .region-search {
   font-size: 12px;
   width: 200px;
+  border-radius: 5px;
 }
 
 .filters .region-search ul {
@@ -205,11 +206,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: white;
   padding: 16px 19px 16px 24px;
   -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
           box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-  border-radius: 5px;
   width: 100%;
   text-align: left;
   position: relative;
@@ -225,9 +224,10 @@ body {
   width: 100%;
   top: 108%;
   left: 0;
-  background-color: white;
   z-index: 1;
   text-align: left;
+  -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+          box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
 }
 
@@ -235,9 +235,6 @@ body {
   padding: 10px 15px;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  background-color: white;
-  -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-          box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   padding-left: 24px;
 }
 
@@ -263,6 +260,23 @@ body {
 
 .filters .region-search #drop-down.in-active {
   display: none;
+}
+
+.filters .region-search-dark {
+  background-color: #2b3945;
+  color: white;
+}
+
+.filters .region-search-dark #drop-down {
+  background-color: #2b3945;
+}
+
+.filters .region-search-light {
+  background-color: white;
+}
+
+.filters .region-search-light #drop-down {
+  background-color: white;
 }
 
 .Heading {
