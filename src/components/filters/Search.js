@@ -4,7 +4,11 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Search = (props) => {
   return (
-    <label className="country-search country-search-dark">
+    <label
+      className={`country-search ${
+        props.isDarkMode ? "country-search-dark" : "country-search-light"
+      }`}
+    >
       <input
         type="text"
         value={props.search}
