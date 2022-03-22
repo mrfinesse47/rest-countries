@@ -330,6 +330,10 @@ body {
     }
   }
 
+  .button:hover {
+    cursor: pointer;
+  }
+
   main {
     .flag {
       width: 320px;

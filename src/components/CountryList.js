@@ -44,8 +44,8 @@ const CountryList = (props) => {
           })
           .map((country) => (
             <Country
-              key={country.cca2}
-              id={country.cca2}
+              key={country.cca3}
+              id={country.cca3}
               flag={country.flags.svg}
               name={country.name.common}
               population={country.population}

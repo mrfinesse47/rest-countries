@@ -6,11 +6,11 @@ import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
   /* <i class="fa-solid fa-arrow-left-long"></i>; */
 }
 
-const CountryDetails = ({ country }) => {
+const CountryDetails = ({ country, setSelectedCountry }) => {
   console.log(country);
   return (
     <div className="CountryDetails">
-      <div className="button">
+      <div className="button" onClick={() => setSelectedCountry(null)}>
         <div className="container">
           <FontAwesomeIcon
             icon={faArrowLeftLong}

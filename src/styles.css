@@ -375,6 +375,10 @@ body {
   margin-right: 8px;
 }
 
+.CountryDetails .button:hover {
+  cursor: pointer;
+}
+
 .CountryDetails main .flag {
   width: 320px;
 }

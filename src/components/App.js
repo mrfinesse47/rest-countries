@@ -21,7 +21,7 @@ function App() {
 
   const findCountryByID = (id) => {
     // console.log("find country" + id);
-    return countries.filter((country) => country.cca2 === id)[0];
+    return countries.filter((country) => country.cca3 === id)[0];
   };
 
   useEffect(() => {
@@ -47,7 +47,10 @@ function App() {
           setSelectedCountry={setSelectedCountry}
         />
       ) : (
-        <CountryDetails country={findCountryByID(selectedCountry)} />
+        <CountryDetails
+          country={findCountryByID(selectedCountry)}
+          setSelectedCountry={setSelectedCountry}
+        />
       )}
     </div>
   );
