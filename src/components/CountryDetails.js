@@ -4,7 +4,19 @@ import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 
 // population.toLocaleString("en-US")
 
-const CountryDetails = ({ country, setSelectedCountry }) => {
+const CountryDetails = ({
+  country,
+  setSelectedCountry,
+  findCountryNameByID,
+}) => {
+  //for this get top 3 most populous the demo only list 3 for belgium but not luxemborg
+  //so may have to move into a component of neighbour buttons list
+  const neighbours = country.borders.map((id) => (
+    <div key={id} className="neighbour">
+      {findCountryNameByID(id)}
+    </div>
+  ));
+
   const getNameOfCurrency = (currencies) => {
     let currenciesString = "";
 
@@ -55,6 +67,7 @@ const CountryDetails = ({ country, setSelectedCountry }) => {
         </aside>
         <footer className="border-countries">
           <h3>Border Countries:</h3>
+          {neighbours}
         </footer>
       </main>
     </div>

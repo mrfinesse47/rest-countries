@@ -381,5 +381,6 @@ body {
 
 .CountryDetails main .flag {
   width: 320px;
+  min-height: 229px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -24,6 +24,10 @@ function App() {
     return countries.filter((country) => country.cca3 === id)[0];
   };
 
+  const findCountryNameByID = (id) => {
+    return findCountryByID(id).name.common;
+  };
+
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       //brings back an array of results,
@@ -50,6 +54,7 @@ function App() {
         <CountryDetails
           country={findCountryByID(selectedCountry)}
           setSelectedCountry={setSelectedCountry}
+          findCountryNameByID={findCountryNameByID}
         />
       )}
     </div>
