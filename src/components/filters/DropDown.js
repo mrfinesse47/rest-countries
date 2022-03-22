@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,13 +8,19 @@ const DropDown = (props) => {
   const [selected, setSeleccted] = useState(-1);
 
   useEffect(() => {
-    window.addEventListener("click", () => {
-      setActive(false);
-    });
-    return window.removeEventListener("click", () => {
-      setActive(false); //remove event listener when component unmounts
-    });
-  }, []);
+    const pageClickEvent = () => {
+      setActive(!isActive);
+    };
+    // If the item is active (ie open) then listen for clicks
+    // if its closed dont listen
+    if (isActive) {
+      window.addEventListener("click", pageClickEvent);
+    }
+    return () => {
+      window.removeEventListener("click", pageClickEvent);
+    };
+    //for every click when the menu is open it removes the listener right away
+  }, [isActive]);
 
   const openMenu = (event) => {
     event.stopPropagation(); //needed so it doesnt count as a window click
