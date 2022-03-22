@@ -310,4 +310,29 @@ body {
 
 .CountryDetails {
   min-height: calc(100vh - 80px); //minus the size of the Heading
+  width: 320px;
+
+  .button {
+    background-color: $white;
+    width: 104px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 40px;
+    margin-bottom: 64px;
+    .container {
+      padding: 7px 23px;
+      .arrow-left-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  main {
+    .flag {
+      width: 320px;
+    }
+  }
 }
