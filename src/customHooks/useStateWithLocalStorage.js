@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
 const useStateWithLocalStorage = (localStorageKey, fallBack) => {
-  const storageVal = localStorage.getItem(localStorageKey);
-  let isDarkMode = false;
+  let storageVal = localStorage.getItem(localStorageKey);
   if (storageVal === "true") {
-    isDarkMode = true; //brings in a string from local storage so i need to cast it to a boolean
+    storageVal = true;
+  } //typecasting to bool
+  if (storageVal === "false") {
+    storageVal = false;
   }
-  const [value, setValue] = useState(isDarkMode || fallBack);
+  const [value, setValue] = useState(storageVal || fallBack);
   //brings in the initial value from local storage and sets state or sets state to the fallback
 
   useEffect(() => {

@@ -5,20 +5,24 @@ import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 // population.toLocaleString("en-US")
 
 const CountryDetails = ({ country, setSelectedCountry }) => {
-  console.log(country);
-
   const getNameOfCurrency = (currencies) => {
     let currenciesString = "";
 
     for (const key in currencies) {
-      // console.log(key);
-      console.log(currencies[key].name);
       currenciesString += " " + currencies[key].name + ",";
     }
-    currenciesString = currenciesString.slice(0, currenciesString.length - 1);
-
-    return currenciesString;
+    return currenciesString.slice(0, currenciesString.length - 1);
   };
+
+  const getLanguages = (languages) => {
+    let languagesString = "";
+
+    for (const key in languages) {
+      languagesString += " " + languages[key] + ",";
+    }
+    return languagesString.slice(0, languagesString.length - 1);
+  };
+
   return (
     <div className="CountryDetails">
       <div className="button" onClick={() => setSelectedCountry(null)}>
@@ -46,9 +50,12 @@ const CountryDetails = ({ country, setSelectedCountry }) => {
           <div className="details-2">
             <p>Top Level Domain: {country.tld}</p>
             <p>Currencies: {getNameOfCurrency(country.currencies)}</p>
+            <p>languages: {getLanguages(country.languages)}</p>
           </div>
         </aside>
-        <footer className="border-countries"></footer>
+        <footer className="border-countries">
+          <h3>Border Countries:</h3>
+        </footer>
       </main>
     </div>
   );
