@@ -19,7 +19,7 @@ body {
 
 .App {
   //  background-color: $very-light-gray;
-  min-height: 100vh;
+  //min-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -40,8 +40,8 @@ body {
 //-------------------------------------------------------------------//
 
 .country-list {
-  min-height: 100vh; //prevents the janky loading due to flexbox
-}
+  min-height: calc(100vh - 221px); //prevents the janky loading due to flexbox
+} //min height is 100% view port - filters and - Heading
 
 //-------------------------------------------------------------------//
 // Country Component Styling                                         //
@@ -99,6 +99,10 @@ body {
   color: $white;
 }
 
+.Country:hover {
+  cursor: pointer;
+}
+
 //-------------------------------------------------------------------//
 // Filters Styling                                                   //
 //-------------------------------------------------------------------//
@@ -106,6 +110,7 @@ body {
 .filters {
   display: flex;
   width: 343px;
+  height: 141px;
   justify-content: center;
   align-items: left;
   flex-direction: column;
@@ -261,6 +266,10 @@ body {
 
 .Heading {
   width: 100%;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  z-index: 2;
 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
   .container {
@@ -293,4 +302,12 @@ body {
 }
 .Heading-light {
   background-color: $white;
+}
+
+//-------------------------------------------------------------------//
+// Country Details Styling                                           //
+//-------------------------------------------------------------------//
+
+.CountryDetails {
+  min-height: calc(100vh - 80px); //minus the size of the Heading
 }

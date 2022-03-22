@@ -15,7 +15,6 @@ body {
 }
 
 .App {
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,7 +39,7 @@ body {
 }
 
 .country-list {
-  min-height: 100vh;
+  min-height: calc(100vh - 221px);
 }
 
 .Country {
@@ -106,11 +105,16 @@ body {
   color: white;
 }
 
+.Country:hover {
+  cursor: pointer;
+}
+
 .filters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 343px;
+  height: 141px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -293,6 +297,11 @@ body {
 
 .Heading {
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  z-index: 2;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
 }
@@ -338,5 +347,9 @@ body {
 
 .Heading-light {
   background-color: white;
+}
+
+.CountryDetails {
+  min-height: calc(100vh - 80px);
 }
 /*# sourceMappingURL=styles.css.map */
