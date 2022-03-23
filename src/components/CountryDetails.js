@@ -85,6 +85,9 @@ const CountryDetails = ({
             <p>
               <strong>Sub Region:</strong> {country.subregion}
             </p>
+            <p>
+              <strong>Capital:</strong> {country.capital}
+            </p>
           </div>
           <div className="details-2">
             <p>

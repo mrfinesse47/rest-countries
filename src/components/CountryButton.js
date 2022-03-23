@@ -2,8 +2,11 @@ import React from "react";
 
 const CountryButton = (props) => {
   const shortedNameIfLong = (name) => {
-    if (name.length > 14) {
-      return name.slice(0, 14) + "..";
+    if (name === "United States") {
+      return "U.S.A.";
+    }
+    if (name.length > 12) {
+      return name.slice(0, 12) + "..";
     }
     return name;
   };

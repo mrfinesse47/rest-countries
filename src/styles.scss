@@ -234,9 +234,9 @@ body {
       li:hover {
         background-color: #b2b2b2;
       }
-      // .selected {
-      //   background-color: #12122;
-      // }
+      .selected {
+        display: none;
+      }
     }
     #drop-down.active {
       display: block;
