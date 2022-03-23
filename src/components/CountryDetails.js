@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 import CountryButton from "./CountryButton";
@@ -41,6 +41,12 @@ const CountryDetails = ({
     }
     return languagesString.slice(0, languagesString.length - 1);
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0, //scroll to top if country changes
+    });
+  }, [country]);
 
   return (
     <div

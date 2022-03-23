@@ -25,7 +25,7 @@ function App() {
 
   const findCountryNameByID = (id) => {
     const country = findCountryByID(id);
-    console.log(country);
+
     return country.name.common;
   };
 

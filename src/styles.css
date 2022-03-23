@@ -266,10 +266,6 @@ body {
   background-color: #b2b2b2;
 }
 
-.filters .region-search #drop-down .selected {
-  background-color: #b2b2b2;
-}
-
 .filters .region-search #drop-down.active {
   display: block;
 }
