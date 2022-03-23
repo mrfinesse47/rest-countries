@@ -1,8 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
-
-// population.toLocaleString("en-US")
+import CountryButton from "./CountryButton";
 
 const CountryDetails = ({
   country,
@@ -15,7 +14,7 @@ const CountryDetails = ({
     }
     return false;
   };
-  const determineNeighbours = () => {
+  const determineNeighboursNames = () => {
     if (isIsland()) {
       return null; //its an island, ie no neighbours
     }
@@ -93,7 +92,11 @@ const CountryDetails = ({
         </aside>
         <footer className="border-countries">
           {!isIsland() && <h3>Border Countries:</h3>}
-          {determineNeighbours()}
+          <div className="container">
+            {determineNeighboursNames().map((name) => (
+              <CountryButton name={name} />
+            ))}
+          </div>
         </footer>
       </main>
     </div>
