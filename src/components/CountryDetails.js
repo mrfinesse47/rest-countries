@@ -58,20 +58,37 @@ const CountryDetails = ({
       </div>
       <main>
         <div className="flag">
-          <img src={country.flags.png} alt={country.name} />
+          <img src={country.flags.svg} alt={country.name} />
         </div>
         <aside className="details-container">
           <div className="details-1">
             <h1>{country.name.common}</h1>
-            <p>Native Name: {country.name.official}</p>
-            <p>Population: {country.population.toLocaleString("en-US")}</p>
-            <p>Region: {country.region}</p>
-            <p>Sub Region: {country.subregion}</p>
+            <p>
+              <strong>Native Name:</strong> {country.name.official}
+            </p>
+            <p>
+              <strong>Population: </strong>
+              {country.population.toLocaleString("en-US")}
+            </p>
+            <p>
+              <strong>Region: </strong>
+              {country.region}
+            </p>
+            <p>
+              <strong>Sub Region:</strong> {country.subregion}
+            </p>
           </div>
           <div className="details-2">
-            <p>Top Level Domain: {country.tld}</p>
-            <p>Currencies: {getNameOfCurrency(country.currencies)}</p>
-            <p>languages: {getLanguages(country.languages)}</p>
+            <p>
+              <strong>Top Level Domain:</strong> {country.tld}
+            </p>
+            <p>
+              <strong>Currencies:</strong>{" "}
+              {getNameOfCurrency(country.currencies)}
+            </p>
+            <p>
+              <strong>languages:</strong> {getLanguages(country.languages)}
+            </p>
           </div>
         </aside>
         <footer className="border-countries">

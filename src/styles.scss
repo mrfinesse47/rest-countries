@@ -336,8 +336,40 @@ body {
 
   main {
     .flag {
-      width: 320px;
-      min-height: 229px;
+      text-align: center;
+      img {
+        width: 320px;
+        // max-height: 229px;
+        border-radius: 5px;
+      }
+      margin-bottom: 38px;
+    }
+    .details-container {
+      p {
+        font-weight: 300;
+      }
+      .details-1 {
+        h1 {
+          font-size: 22px;
+          font-weight: 800;
+          margin-bottom: 16px;
+        }
+        p {
+          margin-bottom: 16px;
+        }
+      }
+      .details-2 {
+        margin-top: 32px;
+        p {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    .border-countries {
+      margin-top: 34px;
+      h3 {
+        font-weight: 600;
+      }
     }
   }
 }

@@ -380,7 +380,42 @@ body {
 }
 
 .CountryDetails main .flag {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.CountryDetails main .flag img {
   width: 320px;
-  min-height: 229px;
+  border-radius: 5px;
+}
+
+.CountryDetails main .details-container p {
+  font-weight: 300;
+}
+
+.CountryDetails main .details-container .details-1 h1 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.CountryDetails main .details-container .details-1 p {
+  margin-bottom: 16px;
+}
+
+.CountryDetails main .details-container .details-2 {
+  margin-top: 32px;
+}
+
+.CountryDetails main .details-container .details-2 p {
+  margin-bottom: 16px;
+}
+
+.CountryDetails main .border-countries {
+  margin-top: 34px;
+}
+
+.CountryDetails main .border-countries h3 {
+  font-weight: 600;
 }
 /*# sourceMappingURL=styles.css.map */
