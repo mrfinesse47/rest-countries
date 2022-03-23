@@ -97,15 +97,18 @@ figure {
 
 #### Custom useState Hook For Local Storage
 
-I found this neat trick to create a custom hook for useState but which sets local strage at the same time. I modified it a little as well to incorporate an initial value if it does not exist in local storage.
+I found this neat trick to create a custom hook for useState but which sets local strage at the same time. I modified it a little as well to incorporate an initial value if it does not exist in local storage. I also made modifications to typecast "true" or "false" strings to a boolean.
 
 ```js
-import { useEffect, useState } from "react";
-
 const useStateWithLocalStorage = (localStorageKey, fallBack) => {
-  const [value, setValue] = useState(
-    localStorage.getItem(localStorageKey) || fallBack
-  );
+  let storageVal = localStorage.getItem(localStorageKey);
+  if (storageVal === "true") {
+    storageVal = true;
+  } //typecasting to bool
+  if (storageVal === "false") {
+    storageVal = false;
+  }
+  const [value, setValue] = useState(storageVal || fallBack);
   //brings in the initial value from local storage and sets state or sets state to the fallback
 
   useEffect(() => {
@@ -118,10 +121,9 @@ const useStateWithLocalStorage = (localStorageKey, fallBack) => {
 };
 
 export default useStateWithLocalStorage;
-};
 ```
 
-credit to this blog [robinwieruch](https://www.robinwieruch.de/local-storage-react/)
+credit to this blog for the article which explained most of the prior code [robinwieruch](https://www.robinwieruch.de/local-storage-react/)
 
 ### Continued development
 

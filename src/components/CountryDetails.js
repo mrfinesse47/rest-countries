@@ -9,13 +9,22 @@ const CountryDetails = ({
   setSelectedCountry,
   findCountryNameByID,
 }) => {
-  //for this get top 3 most populous the demo only list 3 for belgium but not luxemborg
-  //so may have to move into a component of neighbour buttons list
-  const neighbours = country.borders.map((id) => (
-    <div key={id} className="neighbour">
-      {findCountryNameByID(id)}
-    </div>
-  ));
+  const isIsland = () => {
+    if (!country.borders) {
+      return true;
+    }
+    return false;
+  };
+  const determineNeighbours = () => {
+    if (isIsland()) {
+      return null; //its an island, ie no neighbours
+    }
+    return country.borders.map((id) => (
+      <div key={id} className="neighbour">
+        {findCountryNameByID(id)}
+      </div>
+    ));
+  };
 
   const getNameOfCurrency = (currencies) => {
     let currenciesString = "";
@@ -66,8 +75,8 @@ const CountryDetails = ({
           </div>
         </aside>
         <footer className="border-countries">
-          <h3>Border Countries:</h3>
-          {neighbours}
+          {!isIsland() && <h3>Border Countries:</h3>}
+          {determineNeighbours()}
         </footer>
       </main>
     </div>

@@ -24,11 +24,7 @@ const DropDown = (props) => {
 
   const openMenu = (event) => {
     event.stopPropagation(); //needed so it doesnt count as a window click
-    if (isActive) {
-      setActive(false);
-    } else {
-      setActive(true);
-    }
+    setActive(!isActive);
   };
 
   const selectItem = (itemNum) => {
