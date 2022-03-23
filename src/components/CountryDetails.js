@@ -90,18 +90,22 @@ const CountryDetails = ({
           </div>
         </aside>
         <footer className="border-countries">
-          {!isIsland() && <h3>Border Countries:</h3>}
-          <div className="container">
-            {determineNeighbours().map((neighbour) => (
-              <CountryButton
-                key={neighbour.name}
-                name={neighbour.name}
-                isDarkMode={isDarkMode}
-                setSelectedCountry={setSelectedCountry}
-                id={neighbour.id}
-              />
-            ))}
-          </div>
+          {!isIsland() && (
+            <div>
+              <h3>Border Countries:</h3>{" "}
+              <div className="container">
+                {determineNeighbours().map((neighbour) => (
+                  <CountryButton
+                    key={neighbour.name}
+                    name={neighbour.name}
+                    isDarkMode={isDarkMode}
+                    setSelectedCountry={setSelectedCountry}
+                    id={neighbour.id}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
         </footer>
       </main>
     </div>
