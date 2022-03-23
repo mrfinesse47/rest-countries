@@ -7,6 +7,7 @@ const CountryDetails = ({
   country,
   setSelectedCountry,
   findCountryNameByID,
+  isDarkMode,
 }) => {
   const isIsland = () => {
     if (!country.borders) {
@@ -14,15 +15,13 @@ const CountryDetails = ({
     }
     return false;
   };
-  const determineNeighboursNames = () => {
+  const determineNeighbours = () => {
     if (isIsland()) {
       return null; //its an island, ie no neighbours
     }
-    return country.borders.map((id) => (
-      <div key={id} className="neighbour">
-        {findCountryNameByID(id)}
-      </div>
-    ));
+    return country.borders.map((id) => {
+      return { name: findCountryNameByID(id), id };
+    });
   };
 
   const getNameOfCurrency = (currencies) => {
@@ -93,8 +92,14 @@ const CountryDetails = ({
         <footer className="border-countries">
           {!isIsland() && <h3>Border Countries:</h3>}
           <div className="container">
-            {determineNeighboursNames().map((name) => (
-              <CountryButton name={name} />
+            {determineNeighbours().map((neighbour) => (
+              <CountryButton
+                key={neighbour.name}
+                name={neighbour.name}
+                isDarkMode={isDarkMode}
+                setSelectedCountry={setSelectedCountry}
+                id={neighbour.id}
+              />
             ))}
           </div>
         </footer>

@@ -20,7 +20,6 @@ function App() {
   };
 
   const findCountryByID = (id) => {
-    // console.log("find country" + id);
     return countries.filter((country) => country.cca3 === id)[0];
   };
 
@@ -55,6 +54,7 @@ function App() {
           country={findCountryByID(selectedCountry)}
           setSelectedCountry={setSelectedCountry}
           findCountryNameByID={findCountryNameByID}
+          isDarkMode={isDarkMode}
         />
       )}
     </div>
