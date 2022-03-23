@@ -382,22 +382,57 @@ body {
   }
 }
 
+.CountryDetails-dark {
+  color: $white;
+  background-color: $very-dark-blue-bg;
+  .button {
+    color: $white;
+    background-color: $dark-blue;
+  }
+}
+
+.CountryDetails-light {
+  color: $very-dark-blue-text;
+  .button {
+    color: $very-dark-blue-text;
+    background-color: $white;
+  }
+}
+
 //-------------------------------------------------------------------//
 // Country Button Styling                                            //
 //-------------------------------------------------------------------//
 
 .Country-button {
-  height: 28px;
+  //height: 28px;
   width: 96px;
 
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: ccenter;
   background-color: $white;
   margin: 10px 10px 10px 0;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
   border-radius: 2px;
   p {
+    display: block;
     padding: 6px;
     font-size: 12px;
     font-weight: 300;
+    word-wrap: break-word;
   }
+}
+
+.Country-button:hover {
+  cursor: pointer;
+}
+
+.Country-button-dark {
+  background-color: $dark-blue;
+  color: $white;
+}
+
+.Country-button-light {
+  background-color: $white;
+  color: $very-dark-blue-text;
 }

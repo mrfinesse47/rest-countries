@@ -24,7 +24,9 @@ function App() {
   };
 
   const findCountryNameByID = (id) => {
-    return findCountryByID(id).name.common;
+    const country = findCountryByID(id);
+    console.log(country);
+    return country.name.common;
   };
 
   useEffect(() => {

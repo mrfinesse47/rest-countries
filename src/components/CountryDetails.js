@@ -43,7 +43,11 @@ const CountryDetails = ({
   };
 
   return (
-    <div className="CountryDetails">
+    <div
+      className={`CountryDetails ${
+        isDarkMode ? "CountryDetails-dark" : "CountryDetails-light"
+      }`}
+    >
       <div className="button" onClick={() => setSelectedCountry(null)}>
         <div className="container">
           <FontAwesomeIcon
