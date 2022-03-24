@@ -68,58 +68,60 @@ const CountryDetails = ({
         <div className="flag">
           <img src={country.flags.svg} alt={country.name} />
         </div>
-        <aside className="details-container">
-          <div className="details-1">
-            <h1>{country.name.common}</h1>
-            <p>
-              <strong>Native Name:</strong> {country.name.official}
-            </p>
-            <p>
-              <strong>Population: </strong>
-              {country.population.toLocaleString("en-US")}
-            </p>
-            <p>
-              <strong>Region: </strong>
-              {country.region}
-            </p>
-            <p>
-              <strong>Sub Region:</strong> {country.subregion}
-            </p>
-            <p>
-              <strong>Capital:</strong> {country.capital}
-            </p>
-          </div>
-          <div className="details-2">
-            <p>
-              <strong>Top Level Domain:</strong> {country.tld}
-            </p>
-            <p>
-              <strong>Currencies:</strong>{" "}
-              {getNameOfCurrency(country.currencies)}
-            </p>
-            <p>
-              <strong>languages:</strong> {getLanguages(country.languages)}
-            </p>
-          </div>
-        </aside>
-        <footer className="border-countries">
-          {!isIsland() && (
-            <div>
-              <h3>Border Countries:</h3>{" "}
-              <div className="container">
-                {determineNeighbours().map((neighbour) => (
-                  <CountryButton
-                    key={neighbour.name}
-                    name={neighbour.name}
-                    isDarkMode={isDarkMode}
-                    setSelectedCountry={setSelectedCountry}
-                    id={neighbour.id}
-                  />
-                ))}
-              </div>
+        <div className="details-and-border-container">
+          <aside className="details-container">
+            <div className="details-1">
+              <h1>{country.name.common}</h1>
+              <p>
+                <strong>Native Name:</strong> {country.name.official}
+              </p>
+              <p>
+                <strong>Population: </strong>
+                {country.population.toLocaleString("en-US")}
+              </p>
+              <p>
+                <strong>Region: </strong>
+                {country.region}
+              </p>
+              <p>
+                <strong>Sub Region:</strong> {country.subregion}
+              </p>
+              <p>
+                <strong>Capital:</strong> {country.capital}
+              </p>
             </div>
-          )}
-        </footer>
+            <div className="details-2">
+              <p>
+                <strong>Top Level Domain:</strong> {country.tld}
+              </p>
+              <p>
+                <strong>Currencies:</strong>{" "}
+                {getNameOfCurrency(country.currencies)}
+              </p>
+              <p>
+                <strong>languages:</strong> {getLanguages(country.languages)}
+              </p>
+            </div>
+          </aside>
+          <footer className="border-countries">
+            {!isIsland() && (
+              <>
+                <h3>Border Countries:</h3>{" "}
+                <div className="container">
+                  {determineNeighbours().map((neighbour) => (
+                    <CountryButton
+                      key={neighbour.name}
+                      name={neighbour.name}
+                      isDarkMode={isDarkMode}
+                      setSelectedCountry={setSelectedCountry}
+                      id={neighbour.id}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </footer>
+        </div>
       </main>
     </div>
   );
