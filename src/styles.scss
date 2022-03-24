@@ -409,6 +409,7 @@ body {
     @include desktop {
       display: flex;
       flex-direction: row;
+      align-items: center;
       justify-content: space-between;
       width: 1278px;
     }
@@ -429,13 +430,17 @@ body {
       @include desktop {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 574px;
       }
       p {
         font-weight: 300;
       }
       .details-1 {
+        @include desktop {
+          max-width: 260px;
+          padding-right: 40px;
+        }
         h1 {
           font-size: 22px;
           font-weight: 800;
@@ -451,8 +456,10 @@ body {
       }
       .details-2 {
         margin-top: 32px;
+
         @include desktop {
           margin-top: 67px;
+          max-width: 260px;
         }
         p {
           margin-bottom: 16px;
@@ -472,7 +479,7 @@ body {
       h3 {
         font-weight: 600;
         margin-bottom: 6px;
-
+        font-size: 16px;
         @include desktop {
           margin-right: 16px;
         }
