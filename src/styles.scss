@@ -48,6 +48,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 42.5px;
+    justify-content: center;
   }
 } //min height is 100% view port - filters and - Heading
 
@@ -64,6 +65,8 @@ body {
 
   @include desktop {
     margin: 37px;
+    margin-top: 0px;
+    margin-bottom: 75px;
   }
   figure {
     height: 160px; /*container-width*/
@@ -122,6 +125,9 @@ body {
   justify-content: center;
   // align-items: left;
   flex-direction: column;
+  @include mobile {
+    margin-bottom: 32px;
+  }
   @include desktop {
     width: 100%;
     flex-direction: row;
@@ -133,8 +139,11 @@ body {
     position: relative;
     font-size: 16px;
     padding-top: 20px;
-
     margin-bottom: 5px;
+    @include mobile {
+      margin-bottom: 30px;
+      margin-top: 24px;
+    }
     @include desktop {
       padding: 0;
       margin: 0;
@@ -155,6 +164,12 @@ body {
       border-radius: 3px;
       width: 343px;
       height: 48px;
+      @include desktop {
+        width: 480px;
+        height: 56px;
+        padding: 16px 20px;
+      }
+
       outline: none;
     }
 
@@ -210,6 +225,7 @@ body {
     font-size: 12px;
     width: 200px;
     border-radius: 5px;
+
     ul {
       list-style: none;
     }
@@ -219,10 +235,12 @@ body {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      // background-color: $white;
       padding: 16px 19px 16px 24px;
+      @include desktop {
+        padding: 18px 19px 19px 24px;
+        font-size: 14px;
+      }
       box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-      // border-radius: 5px;
       width: 100%;
       text-align: left;
       position: relative;
@@ -240,11 +258,13 @@ body {
       z-index: 1;
       text-align: left;
       box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-
       border-radius: 5px;
+      @include desktop {
+        font-size: 14px;
+      }
 
       li {
-        padding: 10px 15px;
+        padding: 14px 15px;
         transition: background-color 0.3s ease;
         padding-left: 24px;
       }
@@ -292,6 +312,7 @@ body {
   position: sticky;
   top: 0;
   height: 80px;
+
   z-index: 2;
 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
@@ -300,17 +321,28 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 30px 16px;
+    @include desktop {
+      margin: 23px 80px;
+    }
     h1 {
       font-size: 14px;
       font-weight: 800;
+      @include desktop {
+        font-size: 24px;
+      }
     }
 
     .mode {
       display: flex;
+      justify-content: center;
+      align-items: center;
       h3 {
         font-size: 12px;
         font-weight: 600;
         margin-left: 8px;
+        @include desktop {
+          font-size: 16px;
+        }
       }
     }
     .mode:hover {

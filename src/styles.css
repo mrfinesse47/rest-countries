@@ -58,6 +58,9 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 0 42.5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -73,6 +76,8 @@ body {
 @media only screen and (min-width: 1000px) {
   .Country {
     margin: 37px;
+    margin-top: 0px;
+    margin-bottom: 75px;
   }
 }
 
@@ -149,6 +154,12 @@ body {
           flex-direction: column;
 }
 
+@media only screen and (max-width: 999px) {
+  .filters {
+    margin-bottom: 32px;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .filters {
     width: 100%;
@@ -171,6 +182,13 @@ body {
   font-size: 16px;
   padding-top: 20px;
   margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 999px) {
+  .filters .country-search {
+    margin-bottom: 30px;
+    margin-top: 24px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -196,6 +214,14 @@ body {
   width: 343px;
   height: 48px;
   outline: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .filters .country-search input {
+    width: 480px;
+    height: 56px;
+    padding: 16px 20px;
+  }
 }
 
 .filters .country-search .placeholder {
@@ -282,6 +308,13 @@ body {
   position: relative;
 }
 
+@media only screen and (min-width: 1000px) {
+  .filters .region-search .menu-ctn > li {
+    padding: 18px 19px 19px 24px;
+    font-size: 14px;
+  }
+}
+
 .filters .region-search .menu-ctn li:hover {
   cursor: pointer;
 }
@@ -299,8 +332,14 @@ body {
   border-radius: 5px;
 }
 
+@media only screen and (min-width: 1000px) {
+  .filters .region-search #drop-down {
+    font-size: 14px;
+  }
+}
+
 .filters .region-search #drop-down li {
-  padding: 10px 15px;
+  padding: 14px 15px;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   padding-left: 24px;
@@ -371,21 +410,45 @@ body {
   margin: 30px 16px;
 }
 
+@media only screen and (min-width: 1000px) {
+  .Heading .container {
+    margin: 23px 80px;
+  }
+}
+
 .Heading .container h1 {
   font-size: 14px;
   font-weight: 800;
+}
+
+@media only screen and (min-width: 1000px) {
+  .Heading .container h1 {
+    font-size: 24px;
+  }
 }
 
 .Heading .container .mode {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Heading .container .mode h3 {
   font-size: 12px;
   font-weight: 600;
   margin-left: 8px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .Heading .container .mode h3 {
+    font-size: 16px;
+  }
 }
 
 .Heading .container .mode:hover {
