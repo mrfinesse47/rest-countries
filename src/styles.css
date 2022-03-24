@@ -49,7 +49,7 @@ body {
           flex-direction: column;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .country-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -73,7 +73,7 @@ body {
   margin: 40px auto;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .Country {
     margin: 37px;
     margin-top: 0px;
@@ -154,13 +154,13 @@ body {
           flex-direction: column;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1439px) {
   .filters {
     margin-bottom: 32px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .filters {
     width: 100%;
     -webkit-box-orient: horizontal;
@@ -184,14 +184,14 @@ body {
   margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1439px) {
   .filters .country-search {
     margin-bottom: 30px;
     margin-top: 24px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .filters .country-search {
     padding: 0;
     margin: 0;
@@ -216,7 +216,7 @@ body {
   outline: none;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .filters .country-search input {
     width: 480px;
     height: 56px;
@@ -243,7 +243,7 @@ body {
   transition: opacity 0.3s ease;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .filters .country-search .placeholder {
     top: 50%;
   }
@@ -308,7 +308,7 @@ body {
   position: relative;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .filters .region-search .menu-ctn > li {
     padding: 18px 19px 19px 24px;
     font-size: 14px;
@@ -332,7 +332,7 @@ body {
   border-radius: 5px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .filters .region-search #drop-down {
     font-size: 14px;
   }
@@ -410,7 +410,7 @@ body {
   margin: 30px 16px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .Heading .container {
     margin: 23px 80px;
   }
@@ -421,7 +421,7 @@ body {
   font-weight: 800;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .Heading .container h1 {
     font-size: 24px;
   }
@@ -445,7 +445,7 @@ body {
   margin-left: 8px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .Heading .container .mode h3 {
     font-size: 16px;
   }
@@ -469,7 +469,7 @@ body {
   width: 320px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails {
     width: 1278px;
   }
@@ -488,19 +488,19 @@ body {
   margin-bottom: 64px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails .button {
     width: 136px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails .button {
     border-radius: 6px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails .button {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -511,7 +511,7 @@ body {
   padding: 7px 23px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails .button .container {
     padding: 10px 23px;
   }
@@ -525,7 +525,7 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -551,14 +551,14 @@ body {
   border-radius: 5px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main .flag img {
     width: 560px;
     margin-right: 144px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main .details-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -584,7 +584,7 @@ body {
   margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main .details-container .details-1 h1 {
     font-size: 32px;
     margin-bottom: 23px;
@@ -599,7 +599,7 @@ body {
   margin-top: 32px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main .details-container .details-2 {
     margin-top: 67px;
   }
@@ -614,7 +614,7 @@ body {
   margin-bottom: 50px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main .border-countries {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -634,7 +634,7 @@ body {
   margin-bottom: 6px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1440px) {
   .CountryDetails main .border-countries h3 {
     margin-right: 16px;
   }
