@@ -12,11 +12,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,20 +32,14 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Repo URL: [Repo](https://github.com/mrfinesse47/rest-countries)
+- Live Site URL: [Rest Countries](https://mrfinesse47.github.io/rest-countries/)
 
 ## My process
+
+- As usual, plan, built, test, repeat.
 
 ### Built with
 
@@ -59,11 +50,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-#### CSS Object Fit Property
+### CSS Object Fit Property
 
 I noticed the flags were cropped on the smaller cards in the figma design files. Some flags would leave white-space horizontally or some vertically due to all flags not being the same dimensions. So I had to figure out a way to crop the flag horizontally or vertically depending on how it overflowed from its parent container. from w3: If we use object-fit: cover; the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit:
 
@@ -93,7 +82,7 @@ figure {
 }
 ```
 
-#### Custom useState Hook For Local Storage
+### Custom useState Hook For Local Storage
 
 I found this neat trick to create a custom hook for useState but which sets local strage at the same time. I modified it a little as well to incorporate an initial value if it does not exist in local storage. I also made modifications to typecast "true" or "false" strings to a boolean.
 
@@ -123,29 +112,21 @@ export default useStateWithLocalStorage;
 
 credit to this blog for the article which explained most of the prior code [robinwieruch](https://www.robinwieruch.de/local-storage-react/)
 
+### How to deplay a react app to Github pages
+
+By following this [article](https://www.c-sharpcorner.com/article/how-to-deploy-react-application-on-github-pages/) I figured out how to deploy a React App to Github pages
+
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Perhaps I would use React router or something similar to make use of the browser back button. But, as of now I just want to get on with the next project
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+Created By: Kevin Mason
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Linkedin - [@kevin-mason-7b83b3228](https://www.linkedin.com/in/kevin-mason-7b83b3228/)
+- Front End Mentor - [@@mrfinesse47](https://www.frontendmentor.io/profile/mrfinesse47)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+As usual, I would like to thank the Youtube/ article/ blog/ forum respnders of the world for sharing the knowledge of web development.
