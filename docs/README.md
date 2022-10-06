@@ -74,16 +74,6 @@ figure {
 }
 ```
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
 ### Custom useState Hook For Local Storage
 
 I found this neat trick to create a custom hook for useState but which sets local strage at the same time. I modified it a little as well to incorporate an initial value if it does not exist in local storage. I also made modifications to typecast "true" or "false" strings to a boolean.
